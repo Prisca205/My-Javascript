@@ -48,6 +48,9 @@ let mark2HigherBMI = john2Total > mark2Total;
 console.log(mark2HigherBMI)
 
 
-
-
-
+const myName = 'Donald';
+const myJob = 'Developer';
+const yearOfBirth =1717
+const currentYear =2070
+const donald  = `I'm ${myName}, a ${currentYear - yearOfBirth} year old ${myJob} !`;
+console.log(donald);
