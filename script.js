@@ -21,7 +21,7 @@ let readWork = read + work;
 console.log(readWork);
 
 //challenge
-let markmass = 78;
+/* let markmass = 78;
 let markheight = 1.69;
 
 let markTotal  = markmass / markheight ** 2;
@@ -31,26 +31,33 @@ let johnheight = 1.88;
 
 let johnTotal  = markmass / markheight ** 2;
 
-let markHigherBMI = johnTotal > markTotal;
+let markHigherBMI = johnTotal > markTotal; */
 
 ///2nd
 let mark2mass = 95;
 let mark2height = 1.88;
 
-let mark2Total  = markmass / markheight ** 2;
+let mark2Total  = mark2mass / mark2height ** 2;
 //john
-let john2mass = 85;
+let john2mass = 75;
 let john2height = 1.76;
 
-let john2Total  = markmass / markheight ** 2;
-
-let mark2HigherBMI = john2Total > mark2Total;
+let john2Total  = john2mass / john2height ** 2;
+let mark2HigherBMI = john2Total < mark2Total;
 console.log(mark2HigherBMI)
+if (mark2HigherBMI){
+  console.log(`Mark's BMI (${Math.round(mark2Total)}) is greater than John's (${Math.round(john2Total)})`)
+}
+else{
+  console.log(`John's BMI (${Math.round(john2Total)}) is greater than Mark's (${Math.round(mark2Total)})`)
+}
+/*  const check = null === undefined;
+  console.log(check)*/
 
-
-const myName = 'Donald';
+/* const myName = 'Donald';
 const myJob = 'Developer';
 const yearOfBirth =1717
 const currentYear =2070
 const donald  = `I'm ${myName}, a ${currentYear - yearOfBirth} year old ${myJob} !`;
-console.log(donald);
+console.log(donald); */
+
