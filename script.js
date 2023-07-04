@@ -61,3 +61,114 @@ const currentYear =2070
 const donald  = `I'm ${myName}, a ${currentYear - yearOfBirth} year old ${myJob} !`;
 console.log(donald); */
 
+//type conversion-DIY
+//type coersion-Change / converted By Javascript.
+//type = no ,strings etc
+
+//challenge
+const manAverage = (96 + 108 + 89) / 3;
+const barAverage = (88 + 91 + 110) / 3;
+console.log(manAverage);
+console.log(barAverage);
+
+//compare
+if(manAverage > barAverage && manAverage >= 100){
+ console.log(`Manchester Wins!`);
+}
+else if(barAverage > manAverage && barAverage >= 100){
+  console.log(`Barcelona Wins!`);
+}
+else if(manAverage === barAverage && manAverage >= 100 && barAverage >= 100){
+  console.log(`It's a Draw!`);
+}
+else(
+  console.log(`Nobody wins!`)
+);
+
+// Homie
+/* 
+function check (boo){
+  let min = Infinity;
+  let max = -Infinity;
+  const minmax = {Min: null, Max: null};
+  for(let i = 0; i < boo.length; i++ ) 
+
+   if(boo[i] < min && boo.length > 1){
+    min =  boo[i]; 
+    minmax.Min = min;
+    }
+
+  else if(boo[i] > max && boo.length > 1){
+  max =  boo[i]; 
+  minmax.Max = max;
+  }
+  else if(boo.length <= 1){
+    minmax.Min = boo[0];
+    minmax.Max = boo[0];
+  }
+  else if(minmax.Min === ''){
+    minmax.Min = null;
+    minmax.Max = null;
+
+  }
+
+    return minmax;
+}
+  
+
+
+
+let x = check([2]);
+
+console.log(x); */
+/* function times(vals){
+ let fruits ={}
+let appear = 0;
+const first = vals[0];
+  for(let i = 0; i < vals.length; i++)
+    if(vals[i] === vals[i]){
+       appear++;
+       fruits.first = appear;
+    }
+
+
+    
+    return  fruits
+}
+const x = times(['fork', 'spoon', 'knive', 'fork', ])
+console.log(x) */
+//end homie
+
+
+switch(new Date().getDay()){
+case 0:
+  day = 'sunday';
+  break;
+  case 1:
+  day = 'monday';
+  break;
+  case 2:
+  day = 'tuesday';
+  break;
+  case 3:
+  day = 'wednesday';
+  break;
+  case 4:
+  day = 'thuusday';
+  break;
+  case 5:
+  day = 'sunday';
+  break;
+  case 6:
+  day = 'sunday';
+  break;
+
+
+
+
+
+
+}
+
+
+
