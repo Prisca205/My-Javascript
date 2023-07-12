@@ -142,33 +142,153 @@ console.log(x) */
 
 switch(new Date().getDay()){
 case 0:
-  day = 'sunday';
+  console.log( 'sunday');
   break;
   case 1:
-  day = 'monday';
-  break;
+    console.log( 'monday');
+    break;
   case 2:
-  day = 'tuesday';
-  break;
+    console.log( 'tuesday');
+    break;
   case 3:
-  day = 'wednesday';
-  break;
+    console.log( 'wednesday');
+    break;
   case 4:
-  day = 'thuusday';
-  break;
+    console.log( 'thursday');
+    break;
   case 5:
-  day = 'sunday';
-  break;
+    console.log( 'friday');
+    break;
   case 6:
-  day = 'sunday';
-  break;
-
-
-
-
+    console.log( 'saurday');
+    break;
 
 
 }
+
+function SWITCH(){
+  const day = 'sunday';
+  if(day === 'Monday'){
+    console.log('sit at home');
+  }
+  else if(day === 'Tuesday'){
+    console.log('work');
+  }
+  else if(day === 'Wednesday'){
+    console.log('Bake');
+  }
+  else if(day === 'Thursday' || day === 'Friday'){
+    console.log('Gymn');
+  }
+  
+  else{
+  console.log('Free Day!');
+  }
+}
+SWITCH()
+
+
+//tip 
+const calcTip = function(bill){
+  const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+  return tip;
+}
+
+
+
+
+calcTip(100)
+//bills
+const bills = [125, 55, 44]
+console.log(bills)
+
+//tip
+const tips =[calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(tips);
+
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+console.log(total);
+
+
+
+//chalenge "function"
+const calcAvg = (a, b, c) =>( a + b + c) / 3;
+
+
+
+const manAvg = calcAvg(44, 23, 71 );
+const bacAvg = calcAvg(50, 24, 70 );
+console.log(manAvg)
+
+const checkwinner = (manAvg, bacAvg) => {
+  if(manAvg >= 2 * bacAvg){
+    console.log(`Manchester wins! (${manAvg} vs. ${bacAvg}).`)
+  }
+  else if(bacAvg >= 2 * manAvg){
+    console.log(`Barcelona wins! (${bacAvg} vs. ${manAvg}).`)
+  }
+  else{
+    console.log(`Nobody wins!`)
+  }
+}
+checkwinner(manAvg, bacAvg);
+
+/* const cars = ['benz', 'Volvo', 'mercedes']
+console.log(cars)
+let popp = cars.splice()
+ console.log(cars) */
+
+ //prompt
+ const names ={
+  firstName: 'Donald',
+  birthyear: '1969',
+  Year: '2023',
+  job:'Developer',
+  hasLicense: false,
+  lastName: 'Kings',
+  friends: ['Oisa', 'John','Ugo' ],
+  age : function(){
+    return this.Year - this.birthyear;
+  },
+  summary: function Profile(){
+    return `${this.firstName} is a ${this.job} and he ${this.hasLicense ? 'has' : "doesn't have"} a driver's license. `
+  }
+ }
+ console.log(names.summary())
+
+  /* const interest = prompt('what do you want to know?');
+ if(names[interest]){
+  console.log(names[interest])
+ }
+else{
+  console.log('Name not found')
+
+} */
+
+console.log(`${names.firstName} has ${names.friends.length} friends and his best friend is ${names.friends[2]}`)
+
+//objects challenge
+
+const markBmi = {
+  Fname:' Mark Miller',
+  Mass: '78',
+  Height: '1.69',
+  BMI: function calcBMI(){
+  return  this.Mass / this.Height ** 2 
+  }
+}
+const johnBmi = {
+  Fname:' John Smith',
+  Mass: '92',
+  Height: '1.95',
+  BMI: function calcBMI(){
+    return  this.Mass / this.Height ** 2 
+  }
+}
+
+const higherBMI = markBmi.BMI() > johnBmi.BMI() ? `${markBmi.Fname}'s BMI (${Math.round(markBmi.BMI())}) is higher than ${johnBmi.Fname}'s BMI (${Math.round(johnBmi.BMI())}).` : ` ${johnBmi.Fname}'s BMI (${Math.round(johnBmi.BMI())}) is higher than ${markBmi.Fname}'s BMI (${Math.round(markBmi.BMI())}).`
+
+console.log(higherBMI)
 
 
 
